@@ -1,0 +1,1 @@
+require 'opencomponents/rails/version'
