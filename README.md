@@ -1,2 +1,2 @@
-# rails-oc
+# OpenComponents::Rails
 OpenComponents for Rails
