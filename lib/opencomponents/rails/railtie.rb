@@ -1,12 +1,9 @@
-require 'opencomponents'
-
 module OpenComponents::Rails
   class Railtie < ::Rails::Railtie
     config.opencomponents = ActiveSupport::OrderedOptions.new
+    config.opencomponents.registry = OpenComponents::DEFAULT_REGISTRY
 
     initializer 'opencomponents.configure' do |app|
-      app.config.opencomponents.registry ||= OpenComponents::DEFAULT_REGISTRY
-
       OpenComponents.configure do |config|
         config.registry = app.config.opencomponents.registry
       end
