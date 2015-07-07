@@ -5,9 +5,10 @@ module OpenComponents::Rails
     config.opencomponents = ActiveSupport::OrderedOptions.new
 
     initializer 'opencomponents.configure' do |app|
+      app.config.opencomponents.registry ||= OpenComponents::DEFAULT_REGISTRY
+
       OpenComponents.configure do |config|
-        config.registry = app.config.opencomponents.registry ||
-          OpenComponents::DEFAULT_REGISTRY
+        config.registry = app.config.opencomponents.registry
       end
     end
 
