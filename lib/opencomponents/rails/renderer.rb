@@ -2,7 +2,7 @@ module OpenComponents::Rails
   module Renderer
     include ::OpenComponents::Renderer
 
-    include ActionView::Helpers::TagHelper
+    include ::ActionView::Helpers::TagHelper
 
     def render_component(component, opts = {})
       super(component, opts).html_safe
