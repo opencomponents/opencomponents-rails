@@ -6,7 +6,7 @@ module OpenComponents::Rails
 
     def render_component(component, opts = {})
       super(component, opts).html_safe
-    rescue OpenComponents::RegistryTimeout => e
+    rescue OpenComponents::RegistryTimeout
       config = ::Rails.application.config.opencomponents
 
       raise unless config.enable_client_failover
