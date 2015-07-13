@@ -49,7 +49,7 @@ Once that's done, you can use the `oc_component_tag` method in your views. You c
 pass the method a fully formed `href` attribute or use the same options as `OpenComponents`
 [Renderer][2].
 ```erb
-<%= oc_component_tag('my-sweet-component', href='http://localhost:3030/my-sweet-component/1.0.1?name=Zan') %>
+<%= oc_component_tag('my-sweet-component', href: 'http://localhost:3030/my-sweet-component/1.0.1?name=Zan') %>
 
 <%= oc_component_tag('my-sweet-component', params: {name: 'Zan'}, version: '1.0.1') %>
 ```
