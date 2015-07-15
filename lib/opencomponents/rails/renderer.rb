@@ -20,7 +20,7 @@ module OpenComponents::Rails
     #
     # Raises an error if the registry request times out and client failover is
     # disabled, otherwise will return an unrendered <oc-component> tag for
-    # client-side rendered.
+    # client-side rendering.
     def render_component(component, opts = {})
       super(component, opts).html_safe
     rescue OpenComponents::RegistryTimeout
@@ -42,7 +42,7 @@ module OpenComponents::Rails
     # OC registry, component name, and params and version if they're available.
     #
     #   oc_component_tag('my-component', params: {name: 'Zan'}, version: '1.0.2')
-    #   # => <oc-component href="http://localhost:3030/my-component/1.0.2?name=Zan">
+    #   # => <oc-component href="http://localhost:3030/my-component/1.0.2?name=Zan" />
     #
     #   oc_component_tag('my-component', href: 'http://some.registry/my-component')
     #   # => <oc-component href="http://some.registry/my-component" />
