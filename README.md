@@ -1,7 +1,9 @@
 # OpenComponents::Rails
 [![Build Status](https://travis-ci.org/opentable/opencomponents-rails.svg?branch=master)][1]
+[![Gem Version](https://badge.fury.io/rb/opencomponents-rails.svg)][2]
 
 [1]:https://travis-ci.org/opentable/opencomponents-rails
+[2]:http://badge.fury.io/rb/opencomponents-rails
 
 OpenComponents for Rails. This gem provides view helper methods for component
 rendering on both server- and client-side.
@@ -47,7 +49,7 @@ pipeline, add the library to your javascript manifest:
 
 Once that's done, you can use the `oc_component_tag` method in your views. You can either
 pass the method a fully formed `href` attribute or use the same options as `OpenComponents`
-[Renderer][2].
+[Renderer][3].
 ```erb
 <%= oc_component_tag('my-sweet-component', href: 'http://localhost:3030/my-sweet-component/1.0.1?name=Zan') %>
 
@@ -63,9 +65,9 @@ In your view, simply call `render_component`:
 <%= render_component('my-sweet-component', params: {name: 'Zan'}, version: '1.0.1') %>
 ```
 
-The method accepts the same options as the `OpenComponents` [Renderer][2].
+The method accepts the same options as the `OpenComponents` [Renderer][3].
 
-[2]:http://www.rubydoc.info/gems/opencomponents/OpenComponents/Renderer
+[3]:http://www.rubydoc.info/gems/opencomponents/OpenComponents/Renderer
 
 ## Contributing
 Would be pretty cool of you. Open an Issue or PR if you find bugs or have ideas for improvements.
