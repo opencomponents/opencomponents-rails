@@ -4,9 +4,9 @@ gemspec
 
 gem 'rake', '~> 10.4'
 
-rails_version = ENV['RAILS_VERSION'] || '4.2'
+rails_version = ENV['RAILS_VERSION'] || '5.x'
 
-gem 'rails', "~> #{rails_version}.0"
+gem 'rails', "~> #{rails_version}"
 
 group :development do
   gem 'pry-byebug'

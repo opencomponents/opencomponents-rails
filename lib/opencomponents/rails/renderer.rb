@@ -4,6 +4,8 @@ module OpenComponents::Rails
 
     include ::ActionView::Helpers::TagHelper
 
+    OC_COMPONENT_TAG = 'oc-component'.freeze
+
     # Returns a rendered component.
     #
     #   render_component('my-component')
@@ -60,7 +62,7 @@ module OpenComponents::Rails
         options[:href] << "?#{opts[:params].to_param}" if opts[:params]
       end
 
-      tag('oc-component', options)
+      tag(OC_COMPONENT_TAG, options)
     end
   end
 end
